@@ -1,0 +1,9 @@
+﻿services:
+  apiweb.api:
+    image: apiweb.api
+    build:
+      context: .
+      dockerfile: apiWeb.Api/Dockerfile
+    ports:
+      - "5001:8080"
+
