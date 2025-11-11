@@ -24,3 +24,6 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "apiWeb.Api.dll"]
+
+#docker build -t miapi:1.0 -f apiWeb.Api/Dockerfile . && \
+#docker run -d -p 8080:80 --name miapi-contenedor miapi:1.0

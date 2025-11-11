@@ -22,7 +22,7 @@ public class AuthController : ControllerBase
         var token = await _service.Authenticate(request.Username, request.Password);
         if (token == null)
         {
-            return Unauthorized(new { message = "Username or password is incorrect" });
+            return Unauthorized(new { message = "El usuario o la contraseña no coinciden." });
         }
         return Ok(token);
     }
@@ -35,7 +35,7 @@ public class AuthController : ControllerBase
         var sucess = await _service.Register(request.Username, request.Password,request.Role);
         if (!sucess)
             return BadRequest(new { message = "El usuario ya existe." });
-        return Ok(new { message = "Registro exitoso" });
+        return Ok(new { message = "El usuario ha sido registrado con exito." });
     }
     
     public record RegisterRequest(string Username, string Password,string Role);

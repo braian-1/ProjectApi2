@@ -39,11 +39,11 @@ public class AuthService
     {
         var user = await _repository.GetUserByUsernameAsync(username);
         if (user == null) return null;
-        
+
         //Verificar Hash con bcrypt
         bool passwordValid = BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
         if (!passwordValid) return null;
-        
+
         //Generar token claims 
         var claims = new[]
         {
@@ -51,7 +51,7 @@ public class AuthService
             new Claim(ClaimTypes.Role, user.Role),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
-        
+
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
         var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
@@ -62,7 +62,7 @@ public class AuthService
             expires: DateTime.UtcNow.AddMinutes(15),
             signingCredentials: cred
         );
-        
+
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }
