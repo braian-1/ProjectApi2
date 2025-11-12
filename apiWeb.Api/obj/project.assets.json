@@ -3838,19 +3838,19 @@
     ]
   },
   "packageFolders": {
-    "/home/bscharp/.nuget/packages/": {}
+    "/home/c-sharp/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Api/apiWeb.Api.csproj",
+      "projectUniqueName": "/home/c-sharp/ProjectApi2/apiWeb.Api/apiWeb.Api.csproj",
       "projectName": "apiWeb.Api",
-      "projectPath": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Api/apiWeb.Api.csproj",
-      "packagesPath": "/home/bscharp/.nuget/packages/",
-      "outputPath": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Api/obj/",
+      "projectPath": "/home/c-sharp/ProjectApi2/apiWeb.Api/apiWeb.Api.csproj",
+      "packagesPath": "/home/c-sharp/.nuget/packages/",
+      "outputPath": "/home/c-sharp/ProjectApi2/apiWeb.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/bscharp/.nuget/NuGet/NuGet.Config"
+        "/home/c-sharp/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3862,11 +3862,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/bscharp/Documentos/ProjectApi2/apiWeb.Application/apiWeb.Application.csproj": {
-              "projectPath": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Application/apiWeb.Application.csproj"
+            "/home/c-sharp/ProjectApi2/apiWeb.Application/apiWeb.Application.csproj": {
+              "projectPath": "/home/c-sharp/ProjectApi2/apiWeb.Application/apiWeb.Application.csproj"
             },
-            "/home/bscharp/Documentos/ProjectApi2/apiWeb.Infrastructure/apiWeb.Infrastructure.csproj": {
-              "projectPath": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Infrastructure/apiWeb.Infrastructure.csproj"
+            "/home/c-sharp/ProjectApi2/apiWeb.Infrastructure/apiWeb.Infrastructure.csproj": {
+              "projectPath": "/home/c-sharp/ProjectApi2/apiWeb.Infrastructure/apiWeb.Infrastructure.csproj"
             }
           }
         }
@@ -3875,13 +3875,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -3937,7 +3931,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/bscharp/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "bB6rEVdCG6Y=",
+  "dgSpecHash": "8/59SF6vdEk=",
   "success": true,
-  "projectFilePath": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Application/apiWeb.Application.csproj",
+  "projectFilePath": "/home/c-sharp/ProjectApi2/apiWeb.Application/apiWeb.Application.csproj",
   "expectedPackageFiles": [
-    "/home/bscharp/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
-    "/home/bscharp/.nuget/packages/microsoft.extensions.configuration/9.0.10/microsoft.extensions.configuration.9.0.10.nupkg.sha512",
-    "/home/bscharp/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.10/microsoft.extensions.configuration.abstractions.9.0.10.nupkg.sha512",
-    "/home/bscharp/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "/home/bscharp/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "/home/bscharp/.nuget/packages/microsoft.extensions.primitives/9.0.10/microsoft.extensions.primitives.9.0.10.nupkg.sha512",
-    "/home/bscharp/.nuget/packages/microsoft.identitymodel.abstractions/8.14.0/microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
-    "/home/bscharp/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.14.0/microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
-    "/home/bscharp/.nuget/packages/microsoft.identitymodel.logging/8.14.0/microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
-    "/home/bscharp/.nuget/packages/microsoft.identitymodel.tokens/8.14.0/microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
-    "/home/bscharp/.nuget/packages/system.identitymodel.tokens.jwt/8.14.0/system.identitymodel.tokens.jwt.8.14.0.nupkg.sha512"
+    "/home/c-sharp/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
+    "/home/c-sharp/.nuget/packages/microsoft.extensions.configuration/9.0.10/microsoft.extensions.configuration.9.0.10.nupkg.sha512",
+    "/home/c-sharp/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.10/microsoft.extensions.configuration.abstractions.9.0.10.nupkg.sha512",
+    "/home/c-sharp/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/home/c-sharp/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/home/c-sharp/.nuget/packages/microsoft.extensions.primitives/9.0.10/microsoft.extensions.primitives.9.0.10.nupkg.sha512",
+    "/home/c-sharp/.nuget/packages/microsoft.identitymodel.abstractions/8.14.0/microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+    "/home/c-sharp/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.14.0/microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
+    "/home/c-sharp/.nuget/packages/microsoft.identitymodel.logging/8.14.0/microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
+    "/home/c-sharp/.nuget/packages/microsoft.identitymodel.tokens/8.14.0/microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
+    "/home/c-sharp/.nuget/packages/system.identitymodel.tokens.jwt/8.14.0/system.identitymodel.tokens.jwt.8.14.0.nupkg.sha512"
   ],
   "logs": []
 }

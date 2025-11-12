@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/bscharp/Documentos/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj": {}
+    "/home/c-sharp/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj": {}
   },
   "projects": {
-    "/home/bscharp/Documentos/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj": {
+    "/home/c-sharp/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj",
+        "projectUniqueName": "/home/c-sharp/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj",
         "projectName": "apiWeb.Domain",
-        "projectPath": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj",
-        "packagesPath": "/home/bscharp/.nuget/packages/",
-        "outputPath": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Domain/obj/",
+        "projectPath": "/home/c-sharp/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj",
+        "packagesPath": "/home/c-sharp/.nuget/packages/",
+        "outputPath": "/home/c-sharp/ProjectApi2/apiWeb.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/bscharp/.nuget/NuGet/NuGet.Config"
+          "/home/c-sharp/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,13 +32,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -59,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/bscharp/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -553,19 +553,19 @@
     ]
   },
   "packageFolders": {
-    "/home/bscharp/.nuget/packages/": {}
+    "/home/c-sharp/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Application/apiWeb.Application.csproj",
+      "projectUniqueName": "/home/c-sharp/ProjectApi2/apiWeb.Application/apiWeb.Application.csproj",
       "projectName": "apiWeb.Application",
-      "projectPath": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Application/apiWeb.Application.csproj",
-      "packagesPath": "/home/bscharp/.nuget/packages/",
-      "outputPath": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Application/obj/",
+      "projectPath": "/home/c-sharp/ProjectApi2/apiWeb.Application/apiWeb.Application.csproj",
+      "packagesPath": "/home/c-sharp/.nuget/packages/",
+      "outputPath": "/home/c-sharp/ProjectApi2/apiWeb.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/bscharp/.nuget/NuGet/NuGet.Config"
+        "/home/c-sharp/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -577,8 +577,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/bscharp/Documentos/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj": {
-              "projectPath": "/home/bscharp/Documentos/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj"
+            "/home/c-sharp/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj": {
+              "projectPath": "/home/c-sharp/ProjectApi2/apiWeb.Domain/apiWeb.Domain.csproj"
             }
           }
         }
@@ -587,13 +587,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -632,7 +626,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/bscharp/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

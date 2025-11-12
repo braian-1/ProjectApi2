@@ -14,7 +14,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: corsPolicyName, policy =>
     {
-        policy.WithOrigins("http://localhost:3000", "https://projectapi2-7.onrender.com/swagger/index.html");
+        policy.WithOrigins("http://localhost:5176", "https://projectapi2-7.onrender.com/swagger/index.html");
         policy.AllowAnyHeader();
         policy.AllowAnyMethod();
         policy.AllowCredentials();
