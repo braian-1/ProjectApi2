@@ -21,7 +21,7 @@ public class AuthController : ControllerBase
     {
         var result = await _service.RefreshToken(request.RefreshToken);
         if (result == null)
-            return Unauthorized(new { message = "Token inválido o expirado." });
+            return Unauthorized(new { message = "Token invalido o expirado." });
         return Ok(result);
     }
 
