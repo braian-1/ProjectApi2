@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using apiWeb.Domain.Interface;
 using apiWeb.Domain.Models;
@@ -35,16 +36,50 @@ public class AuthService
         return true;
     }
 
-    public async Task<string?> Authenticate(string username, string password)
+    public async Task<object?> Authenticate(string username, string password)
     {
         var user = await _repository.GetUserByUsernameAsync(username);
         if (user == null) return null;
 
-        //Verificar Hash con bcrypt
         bool passwordValid = BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
         if (!passwordValid) return null;
 
-        //Generar token claims 
+        var accessToken = GenerateJwtToken(user);
+        var refreshToken = GenerateRefreshToken();
+        
+        user.RefreshToken = refreshToken;
+        user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+        await _repository.UpdateUserAsync(user);
+
+        return new
+        {
+            accessToken,
+            refreshToken
+        };
+    }
+
+    public async Task<object?> RefreshToken(string refreshToken)
+    {
+        var user = await _repository.GetUserByRefreshTokenAsync(refreshToken);
+        if (user == null || user.RefreshTokenExpiryTime < DateTime.UtcNow)
+            return null;
+
+        var newAccessToken = GenerateJwtToken(user);
+        var newRefreshToken = GenerateRefreshToken();
+
+        user.RefreshToken = newRefreshToken;
+        user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+        await _repository.UpdateUserAsync(user);
+
+        return new
+        {
+            accessToken = newAccessToken,
+            refreshToken = newRefreshToken
+        };
+    }
+    
+    private string GenerateJwtToken(User user)
+    {
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.Username),
@@ -53,16 +88,36 @@ public class AuthService
         };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
-        var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
         var token = new JwtSecurityToken(
             issuer: _configuration["Jwt:Issuer"],
             audience: _configuration["Jwt:Audience"],
             claims: claims,
-            expires: DateTime.UtcNow.AddMinutes(15),
-            signingCredentials: cred
+            expires: DateTime.UtcNow.AddMinutes(1),
+            signingCredentials: creds
         );
 
         return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+
+    private string GenerateRefreshToken()
+    {
+        var randomNumber = new byte[32];
+        using var rng = RandomNumberGenerator.Create();
+        rng.GetBytes(randomNumber);
+        return Convert.ToBase64String(randomNumber);
+    }
+
+    public async Task<bool> LogoutAsync(string refreshToken)
+    {
+        var user = await _repository.GetUserByRefreshTokenAsync(refreshToken);
+        if (user == null)
+            return false;
+
+        user.RefreshToken = null;
+        user.RefreshTokenExpiryTime = null;
+        await _repository.UpdateUserAsync(user);
+        return true;
     }
 }

@@ -53,5 +53,20 @@ public class UserRepository : IUserRepository
     {
         return await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
     }
-    
+
+    public async Task<User?> GetUserByRefreshTokenAsync(string refreshToken)
+    {
+        return await  _context.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
+    }
+
+    public async Task RevokeRefreshTokenAsync(string refreshToken)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
+        if (user == null)
+            return;
+        
+        user.RefreshToken = null;
+        user.RefreshTokenExpiryTime = null;
+        await _context.SaveChangesAsync();
+    }
 }

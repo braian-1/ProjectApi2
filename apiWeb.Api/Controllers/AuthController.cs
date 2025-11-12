@@ -15,6 +15,18 @@ public class AuthController : ControllerBase
     {
         _service = service;
     }
+    
+    [HttpPost("refresh")]
+    public async Task<IActionResult> Refresh([FromBody] RefreshRequest request)
+    {
+        var result = await _service.RefreshToken(request.RefreshToken);
+        if (result == null)
+            return Unauthorized(new { message = "Token inválido o expirado." });
+        return Ok(result);
+    }
+
+    public record RefreshRequest(string RefreshToken);
+
 
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest request)
@@ -39,4 +51,13 @@ public class AuthController : ControllerBase
     }
     
     public record RegisterRequest(string Username, string Password,string Role);
+
+    [HttpPost("logout")]
+    public async Task<IActionResult> Logout(string refreshToken)
+    {
+        var result = await _service.LogoutAsync(refreshToken);
+        if (!result)
+            return Unauthorized(new { message = "El token es invalido o ya expiro" });
+        return Ok(new { message = "Se ha cerrado la sesion correctamente." });
+    }
 }
