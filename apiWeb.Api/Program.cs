@@ -9,6 +9,18 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var corsPolicyName = "AllowFrontend";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: corsPolicyName, policy =>
+    {
+        policy.WithOrigins("http://localhost:3000", "https://projectapi2-7.onrender.com/swagger/index.html");
+        policy.AllowAnyHeader();
+        policy.AllowAnyMethod();
+        policy.AllowCredentials();
+    });
+});
+
 builder.WebHost.UseUrls("http://0.0.0.0:8080");
 
 var conection = builder.Configuration.GetConnectionString("Default");
