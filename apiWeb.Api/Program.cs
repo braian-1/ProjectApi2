@@ -14,7 +14,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: corsPolicyName, policy =>
     {
-        policy.WithOrigins("http://localhost:5176", "https://projectapi2-7.onrender.com/swagger/index.html");
+        policy.WithOrigins("http://localhost:5176", "https://projectapi2-7.onrender.com","http://localhost:5173");
         policy.AllowAnyHeader();
         policy.AllowAnyMethod();
         policy.AllowCredentials();
@@ -71,6 +71,8 @@ if (app.Environment.IsDevelopment()|| app.Environment.IsProduction())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(corsPolicyName);
 
 app.UseHttpsRedirection();
 
