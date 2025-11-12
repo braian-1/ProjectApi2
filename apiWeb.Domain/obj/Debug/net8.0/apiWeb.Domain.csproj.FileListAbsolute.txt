@@ -45,3 +45,15 @@
 /home/bscharp/Documentos/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/refint/apiWeb.Domain.dll
 /home/bscharp/Documentos/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/apiWeb.Domain.pdb
 /home/bscharp/Documentos/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/ref/apiWeb.Domain.dll
+/home/c-sharp/ProjectApi2/apiWeb.Domain/bin/Debug/net8.0/apiWeb.Domain.deps.json
+/home/c-sharp/ProjectApi2/apiWeb.Domain/bin/Debug/net8.0/apiWeb.Domain.dll
+/home/c-sharp/ProjectApi2/apiWeb.Domain/bin/Debug/net8.0/apiWeb.Domain.pdb
+/home/c-sharp/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/apiWeb.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/c-sharp/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/apiWeb.Domain.AssemblyInfoInputs.cache
+/home/c-sharp/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/apiWeb.Domain.AssemblyInfo.cs
+/home/c-sharp/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/apiWeb.Domain.csproj.CoreCompileInputs.cache
+/home/c-sharp/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/apiWeb.Domain.sourcelink.json
+/home/c-sharp/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/apiWeb.Domain.dll
+/home/c-sharp/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/refint/apiWeb.Domain.dll
+/home/c-sharp/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/apiWeb.Domain.pdb
+/home/c-sharp/ProjectApi2/apiWeb.Domain/obj/Debug/net8.0/ref/apiWeb.Domain.dll
