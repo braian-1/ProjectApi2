@@ -14,10 +14,15 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: corsPolicyName, policy =>
     {
-        policy.WithOrigins("http://localhost:5176");
-        policy.AllowAnyHeader();
-        policy.AllowAnyMethod();
-        policy.AllowCredentials();
+        policy
+            .SetIsOriginAllowed(origin => 
+                origin == "http://localhost:5176" ||
+                origin == "http://localhost:5173" ||
+                origin == "https://projectapi2-7.onrender.com"
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
     });
 });
 
